@@ -1,0 +1,38 @@
+# Inspect the CSVs and sketch out an ERD of the tables
+
+dept_manager
+-
+dept_no int PK FK - deparments.dept_no
+emp_no int PK FK - employees.emp_no
+
+titles
+-
+title_id int PK
+title string
+
+deparments
+-
+dept_no int PK
+dept_name string
+
+salaries
+-
+emp_no int PK FK - employees.emp_no
+salary int
+
+dept_emp
+-
+emp_no int PK FK - employees.emp_no
+dept_no int PK FK - deparments.dept_no
+
+employees
+-
+emp_no int PK
+emp_title string PK FK - titles.title_id
+birth_date VARCHAR()
+first_name string
+last_name string
+Sex string
+hire_date VARCHAR()
+
+

@@ -1,5 +1,5 @@
 -- Create tables and insert values
---DROP TABLE employees;
+--DROP TABLE salary;
 CREATE TABLE employees (
  	emp_no INT NOT NULL,
 	PRIMARY KEY (emp_no),
@@ -20,7 +20,7 @@ CREATE TABLE titles (
 
 CREATE TABLE salaries (
 	emp_no INT NOT NULL,
-	PRIMARY KEY (emp_no),
+	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
 	salary INT NOT NULL
 );
 
@@ -28,7 +28,7 @@ SELECT * FROM titles;
 SELECT * FROM employees;
 SELECT * FROM salaries;
 
--- DROP TABLE departments CASCADE;
+ --DROP TABLE salaries CASCADE;
 -- DROP TABLE dept_manager CASCADE;
 -- DROP TABLE dept_emp CASCADE;
 

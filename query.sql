@@ -57,5 +57,4 @@ WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development';
 SELECT COUNT(last_name)
 FROM employees
 GROUP BY last_name
-HAVING 
-ORDER BY DESC
+ORDER BY last_name DESC;
